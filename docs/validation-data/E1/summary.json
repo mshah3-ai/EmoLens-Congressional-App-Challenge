@@ -1,0 +1,58 @@
+{
+ "experiment": "E1",
+ "question": "How fast does EmoLens learn?",
+ "families": 200,
+ "days": 120,
+ "seed": 20260928,
+ "arms": [
+  {
+   "id": "default",
+   "label": "Default scenario"
+  }
+ ],
+ "comparison": {
+  "arms": [
+   {
+    "arm": "default",
+    "label": "Default scenario",
+    "detection": {
+     "30": 0.475,
+     "60": 0.745,
+     "90": 0.8413,
+     "120": 0.8938
+    },
+    "nullPossible": {
+     "30": 0.0771,
+     "60": 0.1126,
+     "90": 0.1268,
+     "120": 0.1255
+    },
+    "nullLikelyStrong": {
+     "30": 0.0179,
+     "60": 0.04,
+     "90": 0.0355,
+     "120": 0.0363
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.0416,
+     "day": 65
+    },
+    "pooledAuroc7": {
+     "30": 0.5604,
+     "60": 0.5911,
+     "90": 0.5968
+    },
+    "skill7": {
+     "30": 0.0223,
+     "60": 0.0136,
+     "90": 0.0216
+    },
+    "expectedSkill7": {
+     "30": 0.0156,
+     "60": 0.0112,
+     "90": 0.012
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "default",
+  "seed": 20260928,
+  "families": 200,
+  "days": 120,
+  "wake": ["06:30", "21:00"],
+  "baseRatePerBlock": 0.05,
+  "todEffects": {"tod_afternoon": 0.3},
+  "trueEffects": {"sleep_deficit": 0.35, "planned_transitions": 0.6, "missed_dose": 0.7, "illness": 0.8},
+  "sources": {"sleep": true, "meals": true, "meds": true, "calendar": true, "places": true, "sensor": true, "weather": true, "physiology": false},
+  "behavior": {
+    "logRate": 0.9,
+    "eodCompletion": 0.8,
+    "alertResponseRate": 0.7,
+    "interveneProbWhenAlerted": 0.5,
+    "interventionEffect": 0.5
+  },
+  "parentSuspected": ["sleep_deficit", "high_sugar_recent"],
+  "labelPolicy": "emolens"
+}

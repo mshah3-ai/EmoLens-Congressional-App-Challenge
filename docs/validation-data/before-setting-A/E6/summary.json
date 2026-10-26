@@ -1,0 +1,143 @@
+{
+ "experiment": "E6",
+ "question": "Does physiology help?",
+ "families": 200,
+ "days": 120,
+ "seed": 20260928,
+ "arms": [
+  {
+   "id": "with_physiology",
+   "label": "Heart-rate data used by the app"
+  },
+  {
+   "id": "without_physiology",
+   "label": "Same children, heart-rate data not used"
+  }
+ ],
+ "comparison": {
+  "arms": [
+   {
+    "arm": "with_physiology",
+    "label": "Heart-rate data used by the app",
+    "detection": {
+     "30": 0.413,
+     "60": 0.608,
+     "90": 0.756,
+     "120": 0.829
+    },
+    "nullPossible": {
+     "30": 0.0816,
+     "60": 0.1116,
+     "90": 0.1127,
+     "120": 0.1127
+    },
+    "nullLikelyStrong": {
+     "30": 0.0107,
+     "60": 0.0248,
+     "90": 0.0277,
+     "120": 0.027
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.0293,
+     "day": 102
+    },
+    "pooledAuroc7": {
+     "30": 0.5557,
+     "60": 0.5828,
+     "90": 0.5973
+    },
+    "skill7": {
+     "30": 0.0215,
+     "60": 0.0155,
+     "90": 0.0184
+    },
+    "expectedSkill7": {
+     "30": 0.0134,
+     "60": 0.0112,
+     "90": 0.0111
+    }
+   },
+   {
+    "arm": "without_physiology",
+    "label": "Same children, heart-rate data not used",
+    "detection": {
+     "30": 0.348,
+     "60": 0.518,
+     "90": 0.635,
+     "120": 0.683
+    },
+    "nullPossible": {
+     "30": 0.0884,
+     "60": 0.1308,
+     "90": 0.1321,
+     "120": 0.1303
+    },
+    "nullLikelyStrong": {
+     "30": 0.0129,
+     "60": 0.0295,
+     "90": 0.0324,
+     "120": 0.0305
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.0342,
+     "day": 114
+    },
+    "pooledAuroc7": {
+     "30": 0.5538,
+     "60": 0.5854,
+     "90": 0.5982
+    },
+    "skill7": {
+     "30": 0.0219,
+     "60": 0.0154,
+     "90": 0.019
+    },
+    "expectedSkill7": {
+     "30": 0.0143,
+     "60": 0.0116,
+     "90": 0.012
+    }
+   }
+  ],
+  "pairedExpectedSkillDiff_with_minus_without": {
+   "30": {
+    "mean": -0.0009,
+    "lo": -0.0018,
+    "hi": 0,
+    "n": 200
+   },
+   "60": {
+    "mean": -0.0005,
+    "lo": -0.0012,
+    "hi": 0.0003,
+    "n": 200
+   },
+   "90": {
+    "mean": -0.0009,
+    "lo": -0.0014,
+    "hi": -0.0004,
+    "n": 200
+   }
+  },
+  "pairedAurocDiff_with_minus_without": {
+   "30": {
+    "mean": 0.0018,
+    "lo": -0.0052,
+    "hi": 0.0092,
+    "n": 200
+   },
+   "60": {
+    "mean": 0.0029,
+    "lo": -0.0046,
+    "hi": 0.0108,
+    "n": 200
+   },
+   "90": {
+    "mean": 0.0011,
+    "lo": -0.0047,
+    "hi": 0.0068,
+    "n": 200
+   }
+  }
+ }
+}

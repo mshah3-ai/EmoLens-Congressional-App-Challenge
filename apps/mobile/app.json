@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "EmoLens",
+    "slug": "emolens",
+    "extra": {
+      "supabaseUrl": "",
+      "portalUrl": "",
+      "router": {},
+      "eas": {
+        "projectId": "430af4f4-fc9b-481a-8742-3a2c94c47f85"
+      }
+    },
+    "owner": "asharma2511"
+  }
+}

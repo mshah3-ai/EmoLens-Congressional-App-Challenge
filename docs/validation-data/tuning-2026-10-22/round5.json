@@ -1,0 +1,8 @@
+[
+ {"name": "A", "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.25}}},
+ {"name": "A, same world path (check = A)", "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.25}}, "halfLifeDays": 90},
+ {"name": "EXPERIMENT A + half-life 180", "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.25}}, "halfLifeDays": 180},
+ {"name": "EXPERIMENT A + half-life 365", "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.25}}, "halfLifeDays": 365},
+ {"name": "EXPERIMENT original + half-life 365", "halfLifeDays": 365},
+ {"name": "EXPERIMENT L exp10 pos2 or1.2 + half-life 365", "status": {"likely": {"exposed": 10, "exposedPos": 2, "or": 1.2}}, "halfLifeDays": 365}
+]

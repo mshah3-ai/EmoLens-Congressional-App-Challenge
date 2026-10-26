@@ -1,0 +1,42 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: pnpm }
+      - uses: denoland/setup-deno@v2 # edge functions are checked and unit-tested with Deno
+        with: { deno-version: v2.x }
+      - run: pnpm install --frozen-lockfile=false
+      - run: pnpm -r typecheck
+      - run: pnpm -r lint
+      - run: pnpm -r test
+      # Bundle the phone app for iOS and Android as a release would: catches a Node-only import (e.g. `buffer`) that
+      # Jest's mocks hide but that breaks the app with "Unable to resolve module" (DECISIONS #134).
+      - run: pnpm --filter @emolens/mobile bundle:check
+      - name: Simulator smoke test (5 families x 30 days)
+        # Skipped until Phase 2 writes the simulator's command-line entry point.
+        if: hashFiles('packages/simulator/src/run.ts') != ''
+        run: pnpm sim:smoke
+      # Moderate advisories inside Expo's tooling are tracked in docs/DECISIONS.md (#27); fail on high or critical.
+      - run: pnpm audit --prod --audit-level high
+
+  # Phase 7: the cloud tests need a local Supabase (Docker is available on GitHub's Linux runners).
+  cloud:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: pnpm }
+      - uses: supabase/setup-cli@v1
+        with: { version: latest }
+      - run: pnpm install --frozen-lockfile=false
+      - run: pnpm --filter @emolens/portal exec playwright install --with-deps chromium
+      - run: supabase start
+      - run: supabase functions serve & sleep 10
+      # RLS tests (pgTAP), edge-function integration tests, the two-phone sync test and the portal smoke tests
+      - run: pnpm test:cloud

@@ -1,0 +1,257 @@
+{
+ "experiment": "E2",
+ "question": "Does the three-answer confirmation avoid the intervention trap?",
+ "families": 200,
+ "days": 120,
+ "seed": 20260928,
+ "arms": [
+  {
+   "id": "emolens_ip0.3",
+   "label": "EmoLens labels, parents step in 30% of the time"
+  },
+  {
+   "id": "naive_ip0.3",
+   "label": "Naive labels, parents step in 30% of the time"
+  },
+  {
+   "id": "emolens_ip0.5",
+   "label": "EmoLens labels, parents step in 50% of the time"
+  },
+  {
+   "id": "naive_ip0.5",
+   "label": "Naive labels, parents step in 50% of the time"
+  },
+  {
+   "id": "emolens_ip0.8",
+   "label": "EmoLens labels, parents step in 80% of the time"
+  },
+  {
+   "id": "naive_ip0.8",
+   "label": "Naive labels, parents step in 80% of the time"
+  }
+ ],
+ "comparison": {
+  "ip0.3": {
+   "meanPlantedBetaDiff_emolens_minus_naive": {
+    "30": {
+     "mean": 0.0006,
+     "lo": 0.0003,
+     "hi": 0.001,
+     "n": 200
+    },
+    "60": {
+     "mean": 0.0038,
+     "lo": 0.0021,
+     "hi": 0.006,
+     "n": 200
+    },
+    "90": {
+     "mean": 0.0043,
+     "lo": 0.0029,
+     "hi": 0.0058,
+     "n": 200
+    },
+    "120": {
+     "mean": 0.0049,
+     "lo": 0.0037,
+     "hi": 0.0062,
+     "n": 200
+    }
+   },
+   "auroc7Diff_emolens_minus_naive": {
+    "30": {
+     "mean": -0.0014,
+     "lo": -0.0041,
+     "hi": 0.0001,
+     "n": 200
+    },
+    "60": {
+     "mean": -0.0003,
+     "lo": -0.002,
+     "hi": 0.001,
+     "n": 200
+    },
+    "90": {
+     "mean": 0.0009,
+     "lo": -0.0002,
+     "hi": 0.002,
+     "n": 199
+    }
+   },
+   "detectionDiff_emolens_minus_naive": {
+    "30": {
+     "mean": 0,
+     "lo": -0.0037,
+     "hi": 0.0038,
+     "n": 200
+    },
+    "60": {
+     "mean": -0.0025,
+     "lo": -0.0075,
+     "hi": 0.0025,
+     "n": 200
+    },
+    "90": {
+     "mean": 0.0038,
+     "lo": -0.0037,
+     "hi": 0.0113,
+     "n": 200
+    },
+    "120": {
+     "mean": 0,
+     "lo": -0.0075,
+     "hi": 0.0063,
+     "n": 200
+    }
+   }
+  },
+  "ip0.5": {
+   "meanPlantedBetaDiff_emolens_minus_naive": {
+    "30": {
+     "mean": 0.0009,
+     "lo": 0.0005,
+     "hi": 0.0013,
+     "n": 200
+    },
+    "60": {
+     "mean": 0.0058,
+     "lo": 0.0035,
+     "hi": 0.0083,
+     "n": 200
+    },
+    "90": {
+     "mean": 0.0056,
+     "lo": 0.0043,
+     "hi": 0.0071,
+     "n": 200
+    },
+    "120": {
+     "mean": 0.0079,
+     "lo": 0.0062,
+     "hi": 0.0097,
+     "n": 200
+    }
+   },
+   "auroc7Diff_emolens_minus_naive": {
+    "30": {
+     "mean": -0.0017,
+     "lo": -0.0047,
+     "hi": 0.0001,
+     "n": 200
+    },
+    "60": {
+     "mean": 0.0007,
+     "lo": -0.0017,
+     "hi": 0.0032,
+     "n": 200
+    },
+    "90": {
+     "mean": 0.0005,
+     "lo": -0.0012,
+     "hi": 0.0021,
+     "n": 199
+    }
+   },
+   "detectionDiff_emolens_minus_naive": {
+    "30": {
+     "mean": 0,
+     "lo": -0.0037,
+     "hi": 0.0038,
+     "n": 200
+    },
+    "60": {
+     "mean": -0.0062,
+     "lo": -0.0137,
+     "hi": 0.0013,
+     "n": 200
+    },
+    "90": {
+     "mean": 0.0075,
+     "lo": -0.0012,
+     "hi": 0.0163,
+     "n": 200
+    },
+    "120": {
+     "mean": 0.0013,
+     "lo": -0.0075,
+     "hi": 0.01,
+     "n": 200
+    }
+   }
+  },
+  "ip0.8": {
+   "meanPlantedBetaDiff_emolens_minus_naive": {
+    "30": {
+     "mean": 0.0009,
+     "lo": 0.0002,
+     "hi": 0.0016,
+     "n": 200
+    },
+    "60": {
+     "mean": 0.008,
+     "lo": 0.0054,
+     "hi": 0.0108,
+     "n": 200
+    },
+    "90": {
+     "mean": 0.01,
+     "lo": 0.0077,
+     "hi": 0.0127,
+     "n": 200
+    },
+    "120": {
+     "mean": 0.0124,
+     "lo": 0.0101,
+     "hi": 0.0148,
+     "n": 200
+    }
+   },
+   "auroc7Diff_emolens_minus_naive": {
+    "30": {
+     "mean": -0.002,
+     "lo": -0.0052,
+     "hi": 0.0005,
+     "n": 200
+    },
+    "60": {
+     "mean": -0.0021,
+     "lo": -0.0061,
+     "hi": 0.0014,
+     "n": 200
+    },
+    "90": {
+     "mean": 0.001,
+     "lo": -0.0009,
+     "hi": 0.0029,
+     "n": 199
+    }
+   },
+   "detectionDiff_emolens_minus_naive": {
+    "30": {
+     "mean": 0.0013,
+     "lo": -0.0037,
+     "hi": 0.0063,
+     "n": 200
+    },
+    "60": {
+     "mean": -0.0012,
+     "lo": -0.01,
+     "hi": 0.0088,
+     "n": 200
+    },
+    "90": {
+     "mean": -0.0025,
+     "lo": -0.0137,
+     "hi": 0.0075,
+     "n": 200
+    },
+    "120": {
+     "mean": 0.0025,
+     "lo": -0.0088,
+     "hi": 0.0138,
+     "n": 200
+    }
+   }
+  }
+ }
+}

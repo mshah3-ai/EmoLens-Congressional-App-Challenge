@@ -1,0 +1,36 @@
+{
+  "name": "@emolens/portal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "next typegen && tsc -p tsconfig.json --noEmit",
+    "lint": "next typegen && eslint . && tsc -p tsconfig.json --noEmit --noUnusedLocals --noUnusedParameters && node scripts/check-no-secrets.mjs",
+    "test": "node --import tsx --test test/*.test.ts",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@emolens/engine": "workspace:*",
+    "@emolens/reports": "workspace:*",
+    "@emolens/shared": "workspace:*",
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.117.2",
+    "next": "16.3.8",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.6.0"
+  }
+}

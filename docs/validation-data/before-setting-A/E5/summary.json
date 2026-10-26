@@ -1,0 +1,58 @@
+{
+ "experiment": "E5",
+ "question": "Can the data overrule a wrong parent belief?",
+ "families": 200,
+ "days": 120,
+ "seed": 20260928,
+ "arms": [
+  {
+   "id": "default",
+   "label": "Default scenario (parent suspects high_sugar_recent, truly null)"
+  }
+ ],
+ "comparison": {
+  "arms": [
+   {
+    "arm": "default",
+    "label": "Default scenario (parent suspects high_sugar_recent, truly null)",
+    "detection": {
+     "30": 0.4275,
+     "60": 0.63,
+     "90": 0.785,
+     "120": 0.8463
+    },
+    "nullPossible": {
+     "30": 0.0816,
+     "60": 0.1232,
+     "90": 0.1324,
+     "120": 0.1289
+    },
+    "nullLikelyStrong": {
+     "30": 0.0134,
+     "60": 0.0295,
+     "90": 0.03,
+     "120": 0.0329
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.035,
+     "day": 94
+    },
+    "pooledAuroc7": {
+     "30": 0.5604,
+     "60": 0.5911,
+     "90": 0.5968
+    },
+    "skill7": {
+     "30": 0.0223,
+     "60": 0.0136,
+     "90": 0.0216
+    },
+    "expectedSkill7": {
+     "30": 0.0156,
+     "60": 0.0112,
+     "90": 0.012
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,55 @@
+/** Spanish words the on-device rule parser looks for (SPEC Appendix B.5: crisis, se desreguló, lloró mucho, se cerró…). */
+import type { Keywords } from './ruleParser';
+
+export const KEYWORDS_ES: Keywords = {
+  meltdown: ['crisis', 'se desreguló', 'se desregulo', 'lloró mucho', 'lloro mucho', 'gritó', 'grito', 'gritando', 'se derrumbó', 'explotó', 'abrumado', 'abrumada'],
+  shutdown: ['se cerró', 'se cerro', 'se escondió', 'se escondio', 'dejó de hablar', 'dejo de hablar', 'se quedó callado', 'se quedó callada', 'se bloqueó', 'se congeló'],
+  other: ['molesto', 'molesta', 'angustiado', 'angustiada', 'momento difícil', 'mal rato'],
+  intensity: [
+    { words: ['leve', 'pequeña', 'pequeño'], value: 2 },
+    { words: ['grande', 'fuerte', 'mala', 'malo'], value: 4 },
+    { words: ['peor', 'enorme', 'terrible'], value: 5 },
+  ],
+  times: [
+    { words: ['esta mañana', 'en la mañana', 'por la mañana'], at: '09:00' },
+    { words: ['al mediodía', 'al mediodia', 'mediodía', 'en el almuerzo', 'a la hora de comer'], at: '12:00' },
+    { words: ['después de la escuela', 'despues de la escuela', 'después del colegio', 'despues del colegio', 'a la salida'], at: '15:30' },
+    { words: ['esta tarde', 'por la tarde', 'en la tarde'], at: '15:00' },
+    { words: ['en la cena', 'esta noche', 'a la hora de cenar'], at: '18:00' },
+    { words: ['a la hora de dormir', 'al acostarse'], at: '20:00' },
+  ],
+  yesterday: ['ayer', 'anoche'],
+  timeLead: ['a las', 'a la', 'como a las', 'sobre las', 'hacia las'],
+  am: ['de la mañana'],
+  pm: ['de la tarde', 'de la noche'],
+  duration: /\b(?:durante|por|duró)\s+(\d{1,3})\s*(?:min|minutos)\b/,
+  durationHours: /\b(?:durante|por|duró)\s+una\s+hora\b/,
+  helped: ['ayudó', 'ayudo', 'ayudaron', 'funcionó', 'funciono', 'funcionaron', 'se calmó', 'se calmo'],
+  notHelped: ['no ayudó', 'no ayudo', 'no ayudaron', 'no funcionó', 'no funciono', 'no funcionaron'],
+  missed: ['olvidó', 'olvido', 'olvidamos', 'no tomó', 'no tomo', 'se le pasó'],
+  skipped: ['saltó', 'salto', 'nos saltamos'],
+  taken: ['tomó', 'tomo', 'le di', 'le dimos'],
+  meals: [
+    { words: ['desayuno', 'desayunó'], type: 'breakfast' }, { words: ['almuerzo', 'almorzó', 'comida'], type: 'lunch' },
+    { words: ['cena', 'cenó'], type: 'dinner' }, { words: ['merienda', 'bocadillo'], type: 'snack' }, { words: ['bebió', 'jugo', 'leche'], type: 'drink' },
+  ],
+  ate: ['comió', 'comio', 'desayunó', 'almorzó', 'cenó', 'merendó', 'bebió'],
+  // Palabras cotidianas para las estrategias incluidas (clave: su nombre en inglés en DEFAULT_STRATEGIES).
+  strategyAliases: {
+    'Quiet space / break area': ['cuarto tranquilo', 'rincón tranquilo', 'rincón de calma'],
+    'Noise-reducing headphones': ['audífonos', 'audifonos', 'auriculares', 'cascos', 'tapones'],
+    'Dim lights / reduce visual input': ['bajamos la luz', 'apagamos la luz', 'apagué la luz', 'luz baja'],
+    'Deep pressure / weighted item': ['manta con peso', 'cobija con peso', 'chaleco con peso', 'abrazo fuerte'],
+    'Comfort object': ['peluche', 'su mantita', 'su muñeco'],
+    'Allow stimming / movement': ['stimming', 'estereotipias'],
+    'Movement break (walk, swing, jump)': ['caminar', 'paseo', 'columpio', 'columpiarse', 'trampolín', 'saltar'],
+    'Calm, few words / co-regulation': ['corregulación', 'pocas palabras', 'voz tranquila'],
+    'Give space and time': ['le dimos espacio', 'le di espacio', 'espacio y tiempo'],
+    'Visual schedule / first-then': ['horario visual', 'primero-después', 'primero después', 'agenda visual'],
+    'Advance warning before a change': ['aviso', 'avisamos', 'le avisé', 'cuenta regresiva'],
+    'Reduce demands': ['menos exigencias', 'bajamos las exigencias'],
+    'Offer choices': ['opciones', 'le dimos a elegir', 'le di a elegir'],
+    'Favorite activity or special interest': ['su programa favorito', 'su juego favorito', 'interés especial'],
+    'AAC / communication support': ['caa', 'tablero de comunicación', 'pictogramas'],
+  },
+};

@@ -54,7 +54,7 @@ forecaster could reach 80% on that measure. Details: [`docs/VALIDATION.md`](docs
   [`docs/PRIVACY_REVIEW.md`](docs/PRIVACY_REVIEW.md).
 
 ## AI use and disclosure
-AI was used to help troubleshoot and debug the project. The optional
+AI was used to help troubleshoot and debug the project, according to its developer. The optional
 Ask EmoLens chatbot and related AI features use Anthropic's Claude API, when enabled by the family.
 See [`AIDisclosure.md`](AIDisclosure.md) for the complete disclosure.
 

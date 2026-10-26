@@ -1,0 +1,12 @@
+[
+ {"name": "baseline"},
+ {"name": "likely.pHarm 0.85", "status": {"likely": {"pHarm": 0.85}}},
+ {"name": "likely.pHarm 0.80", "status": {"likely": {"pHarm": 0.80}}},
+ {"name": "likely.exposed 15, exposedPos 3", "status": {"likely": {"exposed": 15, "exposedPos": 3}}},
+ {"name": "likely.or 1.2", "status": {"likely": {"or": 1.2}}},
+ {"name": "tau [1.0, 1.5]", "tauGrid": [1.0, 1.5]},
+ {"name": "tau [0.75, 1.0, 1.5, 2.0]", "tauGrid": [0.75, 1.0, 1.5, 2.0]},
+ {"name": "tau [1.0, 1.5, 2.0]", "tauGrid": [1.0, 1.5, 2.0]},
+ {"name": "trigger sd x1.25", "triggerSdScale": 1.25},
+ {"name": "trigger sd x1.5", "triggerSdScale": 1.5}
+]

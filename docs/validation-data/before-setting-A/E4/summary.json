@@ -1,0 +1,283 @@
+{
+ "experiment": "E4",
+ "question": "How much does logging diligence matter?",
+ "families": 200,
+ "days": 120,
+ "seed": 20260928,
+ "arms": [
+  {
+   "id": "log1_eod0.9",
+   "label": "Logs 100% of hard moments, end-of-day check 90%"
+  },
+  {
+   "id": "log1_eod0.6",
+   "label": "Logs 100% of hard moments, end-of-day check 60%"
+  },
+  {
+   "id": "log0.8_eod0.9",
+   "label": "Logs 80% of hard moments, end-of-day check 90%"
+  },
+  {
+   "id": "log0.8_eod0.6",
+   "label": "Logs 80% of hard moments, end-of-day check 60%"
+  },
+  {
+   "id": "log0.6_eod0.9",
+   "label": "Logs 60% of hard moments, end-of-day check 90%"
+  },
+  {
+   "id": "log0.6_eod0.6",
+   "label": "Logs 60% of hard moments, end-of-day check 60%"
+  }
+ ],
+ "comparison": {
+  "arms": [
+   {
+    "arm": "log1_eod0.9",
+    "label": "Logs 100% of hard moments, end-of-day check 90%",
+    "detection": {
+     "30": 0.4775,
+     "60": 0.6788,
+     "90": 0.8138,
+     "120": 0.8613
+    },
+    "nullPossible": {
+     "30": 0.0889,
+     "60": 0.1253,
+     "90": 0.1245,
+     "120": 0.1313
+    },
+    "nullLikelyStrong": {
+     "30": 0.0142,
+     "60": 0.0321,
+     "90": 0.0324,
+     "120": 0.0305
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.0355,
+     "day": 93
+    },
+    "pooledAuroc7": {
+     "30": 0.5665,
+     "60": 0.5964,
+     "90": 0.6019
+    },
+    "skill7": {
+     "30": 0.022,
+     "60": 0.013,
+     "90": 0.0211
+    },
+    "expectedSkill7": {
+     "30": 0.0147,
+     "60": 0.0105,
+     "90": 0.0113
+    }
+   },
+   {
+    "arm": "log1_eod0.6",
+    "label": "Logs 100% of hard moments, end-of-day check 60%",
+    "detection": {
+     "30": 0.4288,
+     "60": 0.605,
+     "90": 0.7825,
+     "120": 0.8263
+    },
+    "nullPossible": {
+     "30": 0.0721,
+     "60": 0.1134,
+     "90": 0.1192,
+     "120": 0.1226
+    },
+    "nullLikelyStrong": {
+     "30": 0.0145,
+     "60": 0.0271,
+     "90": 0.0318,
+     "120": 0.0324
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.0355,
+     "day": 107
+    },
+    "pooledAuroc7": {
+     "30": 0.5601,
+     "60": 0.5944,
+     "90": 0.5989
+    },
+    "skill7": {
+     "30": 0.0601,
+     "60": 0.0477,
+     "90": 0.057
+    },
+    "expectedSkill7": {
+     "30": 0.0492,
+     "60": 0.0428,
+     "90": 0.0442
+    }
+   },
+   {
+    "arm": "log0.8_eod0.9",
+    "label": "Logs 80% of hard moments, end-of-day check 90%",
+    "detection": {
+     "30": 0.4113,
+     "60": 0.6188,
+     "90": 0.755,
+     "120": 0.8163
+    },
+    "nullPossible": {
+     "30": 0.0876,
+     "60": 0.1361,
+     "90": 0.1366,
+     "120": 0.1358
+    },
+    "nullLikelyStrong": {
+     "30": 0.01,
+     "60": 0.0263,
+     "90": 0.0276,
+     "120": 0.03
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.0347,
+     "day": 97
+    },
+    "pooledAuroc7": {
+     "30": 0.5619,
+     "60": 0.5803,
+     "90": 0.6025
+    },
+    "skill7": {
+     "30": 0.0095,
+     "60": 0.0027,
+     "90": 0.0094
+    },
+    "expectedSkill7": {
+     "30": 0.0043,
+     "60": 0.002,
+     "90": 0.0024
+    }
+   },
+   {
+    "arm": "log0.8_eod0.6",
+    "label": "Logs 80% of hard moments, end-of-day check 60%",
+    "detection": {
+     "30": 0.3888,
+     "60": 0.5625,
+     "90": 0.7225,
+     "120": 0.785
+    },
+    "nullPossible": {
+     "30": 0.0739,
+     "60": 0.1187,
+     "90": 0.1255,
+     "120": 0.1332
+    },
+    "nullLikelyStrong": {
+     "30": 0.0097,
+     "60": 0.0211,
+     "90": 0.0295,
+     "120": 0.0313
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.0345,
+     "day": 103
+    },
+    "pooledAuroc7": {
+     "30": 0.5549,
+     "60": 0.5765,
+     "90": 0.6008
+    },
+    "skill7": {
+     "30": 0.0351,
+     "60": 0.0246,
+     "90": 0.034
+    },
+    "expectedSkill7": {
+     "30": 0.0267,
+     "60": 0.0224,
+     "90": 0.0231
+    }
+   },
+   {
+    "arm": "log0.6_eod0.9",
+    "label": "Logs 60% of hard moments, end-of-day check 90%",
+    "detection": {
+     "30": 0.3425,
+     "60": 0.5275,
+     "90": 0.6525,
+     "120": 0.76
+    },
+    "nullPossible": {
+     "30": 0.0853,
+     "60": 0.1358,
+     "90": 0.1437,
+     "120": 0.1416
+    },
+    "nullLikelyStrong": {
+     "30": 0.0079,
+     "60": 0.0192,
+     "90": 0.0229,
+     "120": 0.0268
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.0308,
+     "day": 110
+    },
+    "pooledAuroc7": {
+     "30": 0.559,
+     "60": 0.5749,
+     "90": 0.5964
+    },
+    "skill7": {
+     "30": 0.0032,
+     "60": -0.0028,
+     "90": 0.0017
+    },
+    "expectedSkill7": {
+     "30": -0.0013,
+     "60": -0.0026,
+     "90": -0.0028
+    }
+   },
+   {
+    "arm": "log0.6_eod0.6",
+    "label": "Logs 60% of hard moments, end-of-day check 60%",
+    "detection": {
+     "30": 0.3288,
+     "60": 0.49,
+     "90": 0.6288,
+     "120": 0.7363
+    },
+    "nullPossible": {
+     "30": 0.0671,
+     "60": 0.1216,
+     "90": 0.1268,
+     "120": 0.1358
+    },
+    "nullLikelyStrong": {
+     "30": 0.0082,
+     "60": 0.0182,
+     "90": 0.0247,
+     "120": 0.0271
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.0297,
+     "day": 99
+    },
+    "pooledAuroc7": {
+     "30": 0.5509,
+     "60": 0.5688,
+     "90": 0.5955
+    },
+    "skill7": {
+     "30": 0.0178,
+     "60": 0.0075,
+     "90": 0.015
+    },
+    "expectedSkill7": {
+     "30": 0.0106,
+     "60": 0.0074,
+     "90": 0.0072
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,13 @@
+[
+ {"name": "A: L exp15 pos3 or1.25", "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.25}}},
+ {"name": "L exp15 pos3 or1.2", "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.2}}},
+ {"name": "L exp10 pos2 or1.2", "status": {"likely": {"exposed": 10, "exposedPos": 2, "or": 1.2}}},
+ {"name": "A + tau [0.75, 1.0]", "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.25}}, "tauGrid": [0.75, 1.0]},
+ {"name": "A + likely.pHarm 0.88", "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.25, "pHarm": 0.88}}},
+ {"name": "A + trigger sd x0.85", "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.25}}, "triggerSdScale": 0.85},
+ {"name": "EXPERIMENT mean0, original thresholds", "triggerMeanScale": 0},
+ {"name": "EXPERIMENT mean0 + L p0.85 exp15 pos3 or1.2", "triggerMeanScale": 0, "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.2, "pHarm": 0.85}}},
+ {"name": "EXPERIMENT mean0 + L p0.80 exp15 pos3 or1.2", "triggerMeanScale": 0, "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.2, "pHarm": 0.80}}},
+ {"name": "EXPERIMENT mean0 + L p0.80 exp15 pos3 or1.2 + tau [0.5,0.75,1,1.5]", "triggerMeanScale": 0, "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.2, "pHarm": 0.80}}, "tauGrid": [0.5, 0.75, 1.0, 1.5]},
+ {"name": "EXPERIMENT mean0.5 + A", "triggerMeanScale": 0.5, "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.25}}}
+]

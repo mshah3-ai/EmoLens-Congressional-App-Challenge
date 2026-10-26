@@ -1,0 +1,11 @@
+[
+ {"name": "baseline"},
+ {"name": "L exp15 pos3", "status": {"likely": {"exposed": 15, "exposedPos": 3}}},
+ {"name": "L exp15 pos4", "status": {"likely": {"exposed": 15, "exposedPos": 4}}},
+ {"name": "L exp20 pos3", "status": {"likely": {"exposedPos": 3}}},
+ {"name": "L exp12 pos3", "status": {"likely": {"exposed": 12, "exposedPos": 3}}},
+ {"name": "L exp10 pos3", "status": {"likely": {"exposed": 10, "exposedPos": 3}}},
+ {"name": "L exp15 pos3 or1.25", "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.25}}},
+ {"name": "L exp15 pos3 or1.2", "status": {"likely": {"exposed": 15, "exposedPos": 3, "or": 1.2}}},
+ {"name": "L exp12 pos3 or1.25", "status": {"likely": {"exposed": 12, "exposedPos": 3, "or": 1.25}}}
+]

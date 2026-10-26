@@ -1,0 +1,22 @@
+{
+  "name": "@emolens/cloud",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "cd functions && deno check --config deno.json */index.ts _tests/*.ts && cd .. && tsc -p tsconfig.json",
+    "lint": "cd functions && deno lint --config deno.json && cd .. && eslint tests && tsc -p tsconfig.json --noUnusedLocals --noUnusedParameters",
+    "test": "cd functions && deno test --config deno.json --allow-env _tests",
+    "test:db": "supabase test db",
+    "test:integration": "node --import tsx --test --test-concurrency=1 tests/integration/*.test.ts"
+  },
+  "devDependencies": {
+    "@supabase/supabase-js": "2.117.2",
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
+    "pg": "^8.13.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.6.0",
+    "undici": "^7"
+  }
+}

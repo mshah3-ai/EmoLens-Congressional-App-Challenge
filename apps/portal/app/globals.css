@@ -1,0 +1,33 @@
+/* The portal's look: EmoLens design tokens (SPEC 28.1) as Tailwind colors, light and dark. */
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #F6F7FB;
+  --color-surface: #FFFFFF;
+  --color-ink: #1B2233;
+  --color-muted: #5A6378;
+  --color-primary: #4A5FD6;
+  --color-line: #E3E6EF;
+  --color-low: #2E8B6E;
+  --color-moderate: #B7791F;
+  --color-high: #C2413B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0F1320;
+    --color-surface: #181D2E;
+    --color-ink: #E9ECF5;
+    --color-muted: #A3ABC0;
+    --color-primary: #8C9BFF;
+    --color-line: #2A3148;
+  }
+}
+
+body { background: var(--color-bg); color: var(--color-ink); }
+
+/* Printing a report: only the report itself, no portal navigation. */
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+}

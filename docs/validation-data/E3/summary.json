@@ -1,0 +1,148 @@
+{
+ "experiment": "E3",
+ "question": "Does shrinkage prevent fake patterns?",
+ "families": 200,
+ "days": 120,
+ "seed": 20260928,
+ "arms": [
+  {
+   "id": "tau_selected",
+   "label": "Empirical-Bayes tau (EmoLens)"
+  },
+  {
+   "id": "tau_fixed_1",
+   "label": "Fixed tau = 1"
+  },
+  {
+   "id": "weak_prior",
+   "label": "Weak prior (trigger sd = 5, tau = 1)"
+  }
+ ],
+ "comparison": {
+  "arms": [
+   {
+    "arm": "tau_selected",
+    "label": "Empirical-Bayes tau (EmoLens)",
+    "detection": {
+     "30": 0.475,
+     "60": 0.745,
+     "90": 0.8413,
+     "120": 0.8938
+    },
+    "nullPossible": {
+     "30": 0.0771,
+     "60": 0.1126,
+     "90": 0.1268,
+     "120": 0.1255
+    },
+    "nullLikelyStrong": {
+     "30": 0.0179,
+     "60": 0.04,
+     "90": 0.0355,
+     "120": 0.0363
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.0416,
+     "day": 65
+    },
+    "pooledAuroc7": {
+     "30": 0.5604,
+     "60": 0.5911,
+     "90": 0.5968
+    },
+    "skill7": {
+     "30": 0.0223,
+     "60": 0.0136,
+     "90": 0.0216
+    },
+    "expectedSkill7": {
+     "30": 0.0156,
+     "60": 0.0112,
+     "90": 0.012
+    }
+   },
+   {
+    "arm": "tau_fixed_1",
+    "label": "Fixed tau = 1",
+    "detection": {
+     "30": 0.4713,
+     "60": 0.6513,
+     "90": 0.7625,
+     "120": 0.7963
+    },
+    "nullPossible": {
+     "30": 0.0761,
+     "60": 0.0887,
+     "90": 0.0889,
+     "120": 0.0876
+    },
+    "nullLikelyStrong": {
+     "30": 0.0179,
+     "60": 0.0289,
+     "90": 0.0261,
+     "120": 0.0237
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.0305,
+     "day": 81
+    },
+    "pooledAuroc7": {
+     "30": 0.5613,
+     "60": 0.592,
+     "90": 0.5967
+    },
+    "skill7": {
+     "30": 0.0231,
+     "60": 0.0138,
+     "90": 0.021
+    },
+    "expectedSkill7": {
+     "30": 0.0157,
+     "60": 0.0113,
+     "90": 0.0124
+    }
+   },
+   {
+    "arm": "weak_prior",
+    "label": "Weak prior (trigger sd = 5, tau = 1)",
+    "detection": {
+     "30": 0.315,
+     "60": 0.4825,
+     "90": 0.5775,
+     "120": 0.6388
+    },
+    "nullPossible": {
+     "30": 0.0616,
+     "60": 0.0595,
+     "90": 0.0671,
+     "120": 0.0826
+    },
+    "nullLikelyStrong": {
+     "30": 0.0371,
+     "60": 0.0532,
+     "90": 0.0511,
+     "120": 0.0445
+    },
+    "maxNullLikelyStrong": {
+     "value": 0.055,
+     "day": 73
+    },
+    "pooledAuroc7": {
+     "30": 0.5473,
+     "60": 0.5818,
+     "90": 0.5826
+    },
+    "skill7": {
+     "30": -0.1506,
+     "60": -0.062,
+     "90": -0.0133
+    },
+    "expectedSkill7": {
+     "30": -0.1008,
+     "60": -0.0522,
+     "90": -0.0121
+    }
+   }
+  ]
+ }
+}

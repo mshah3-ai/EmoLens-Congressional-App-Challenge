@@ -1,0 +1,4 @@
+{
+  "nodeModulesDir": "none",
+  "lint": { "rules": { "tags": ["recommended"] } }
+}

@@ -1,0 +1,828 @@
+{
+ "families": 50,
+ "days": 120,
+ "seeds": [
+  101,
+  102,
+  103,
+  104
+ ],
+ "settings": [
+  {
+   "name": "A: L exp15 pos3 or1.25",
+   "status": {
+    "likely": {
+     "exposed": 15,
+     "exposedPos": 3,
+     "or": 1.25
+    }
+   }
+  },
+  {
+   "name": "L exp15 pos3 or1.2",
+   "status": {
+    "likely": {
+     "exposed": 15,
+     "exposedPos": 3,
+     "or": 1.2
+    }
+   }
+  },
+  {
+   "name": "L exp10 pos2 or1.2",
+   "status": {
+    "likely": {
+     "exposed": 10,
+     "exposedPos": 2,
+     "or": 1.2
+    }
+   }
+  },
+  {
+   "name": "A + tau [0.75, 1.0]",
+   "status": {
+    "likely": {
+     "exposed": 15,
+     "exposedPos": 3,
+     "or": 1.25
+    }
+   },
+   "tauGrid": [
+    0.75,
+    1
+   ]
+  },
+  {
+   "name": "A + likely.pHarm 0.88",
+   "status": {
+    "likely": {
+     "exposed": 15,
+     "exposedPos": 3,
+     "or": 1.25,
+     "pHarm": 0.88
+    }
+   }
+  },
+  {
+   "name": "A + trigger sd x0.85",
+   "status": {
+    "likely": {
+     "exposed": 15,
+     "exposedPos": 3,
+     "or": 1.25
+    }
+   },
+   "triggerSdScale": 0.85
+  },
+  {
+   "name": "EXPERIMENT mean0, original thresholds",
+   "triggerMeanScale": 0
+  },
+  {
+   "name": "EXPERIMENT mean0 + L p0.85 exp15 pos3 or1.2",
+   "triggerMeanScale": 0,
+   "status": {
+    "likely": {
+     "exposed": 15,
+     "exposedPos": 3,
+     "or": 1.2,
+     "pHarm": 0.85
+    }
+   }
+  },
+  {
+   "name": "EXPERIMENT mean0 + L p0.80 exp15 pos3 or1.2",
+   "triggerMeanScale": 0,
+   "status": {
+    "likely": {
+     "exposed": 15,
+     "exposedPos": 3,
+     "or": 1.2,
+     "pHarm": 0.8
+    }
+   }
+  },
+  {
+   "name": "EXPERIMENT mean0 + L p0.80 exp15 pos3 or1.2 + tau [0.5,0.75,1,1.5]",
+   "triggerMeanScale": 0,
+   "status": {
+    "likely": {
+     "exposed": 15,
+     "exposedPos": 3,
+     "or": 1.2,
+     "pHarm": 0.8
+    }
+   },
+   "tauGrid": [
+    0.5,
+    0.75,
+    1,
+    1.5
+   ]
+  },
+  {
+   "name": "EXPERIMENT mean0.5 + A",
+   "triggerMeanScale": 0.5,
+   "status": {
+    "likely": {
+     "exposed": 15,
+     "exposedPos": 3,
+     "or": 1.25
+    }
+   }
+  }
+ ],
+ "reports": [
+  {
+   "name": "A: L exp15 pos3 or1.25",
+   "families": 200,
+   "detection90": {
+    "mean": 0.8575,
+    "lo": 0.8346,
+    "hi": 0.8804,
+    "n": 200
+   },
+   "detection120": {
+    "mean": 0.8975,
+    "lo": 0.8775,
+    "hi": 0.9175,
+    "n": 200
+   },
+   "plantedFound90": {
+    "sleep_deficit": 0.965,
+    "missed_dose": 0.685,
+    "planned_transitions": 0.915,
+    "illness": 0.865
+   },
+   "plantedFound120": {
+    "sleep_deficit": 0.97,
+    "missed_dose": 0.745,
+    "planned_transitions": 0.925,
+    "illness": 0.95
+   },
+   "worstNullLikelyStrong": {
+    "value": 0.0439,
+    "day": 81
+   },
+   "nullLikelyStrong90": 0.0384,
+   "nullPossible90": 0.125,
+   "missed90": {
+    "sleep_deficit": {
+     "P(raises) < 0.9": 7
+    },
+    "missed_dose": {
+     "P(raises) < 0.9": 39,
+     "exposed hard moments < min": 18,
+     "not enough data": 3,
+     "exposed < min": 3
+    },
+    "planned_transitions": {
+     "P(raises) < 0.9": 13,
+     "OR < min": 4
+    },
+    "illness": {
+     "exposed hard moments < min": 8,
+     "P(raises) < 0.9": 9,
+     "not enough data": 9,
+     "exposed < min": 1
+    }
+   },
+   "falseByFeature": {
+    "unusual_day": 4429,
+    "hunger_gap": 2046,
+    "appointment_near": 1853,
+    "noise_high": 1570,
+    "night_wakings": 1545,
+    "new_place": 1236
+   }
+  },
+  {
+   "name": "L exp15 pos3 or1.2",
+   "families": 200,
+   "detection90": {
+    "mean": 0.8638,
+    "lo": 0.8413,
+    "hi": 0.8862,
+    "n": 200
+   },
+   "detection120": {
+    "mean": 0.9025,
+    "lo": 0.8826,
+    "hi": 0.9224,
+    "n": 200
+   },
+   "plantedFound90": {
+    "sleep_deficit": 0.965,
+    "missed_dose": 0.685,
+    "planned_transitions": 0.94,
+    "illness": 0.865
+   },
+   "plantedFound120": {
+    "sleep_deficit": 0.97,
+    "missed_dose": 0.745,
+    "planned_transitions": 0.945,
+    "illness": 0.95
+   },
+   "worstNullLikelyStrong": {
+    "value": 0.0468,
+    "day": 81
+   },
+   "nullLikelyStrong90": 0.0416,
+   "nullPossible90": 0.1218,
+   "missed90": {
+    "sleep_deficit": {
+     "P(raises) < 0.9": 7
+    },
+    "missed_dose": {
+     "P(raises) < 0.9": 39,
+     "exposed hard moments < min": 18,
+     "not enough data": 3,
+     "exposed < min": 3
+    },
+    "planned_transitions": {
+     "P(raises) < 0.9": 12
+    },
+    "illness": {
+     "exposed hard moments < min": 8,
+     "P(raises) < 0.9": 9,
+     "not enough data": 9,
+     "exposed < min": 1
+    }
+   },
+   "falseByFeature": {
+    "unusual_day": 4429,
+    "noise_high": 2073,
+    "hunger_gap": 2046,
+    "appointment_near": 1853,
+    "night_wakings": 1545,
+    "new_place": 1236
+   }
+  },
+  {
+   "name": "L exp10 pos2 or1.2",
+   "families": 200,
+   "detection90": {
+    "mean": 0.8713,
+    "lo": 0.849,
+    "hi": 0.8935,
+    "n": 200
+   },
+   "detection120": {
+    "mean": 0.9038,
+    "lo": 0.8839,
+    "hi": 0.9236,
+    "n": 200
+   },
+   "plantedFound90": {
+    "sleep_deficit": 0.965,
+    "missed_dose": 0.695,
+    "planned_transitions": 0.94,
+    "illness": 0.885
+   },
+   "plantedFound120": {
+    "sleep_deficit": 0.97,
+    "missed_dose": 0.745,
+    "planned_transitions": 0.945,
+    "illness": 0.955
+   },
+   "worstNullLikelyStrong": {
+    "value": 0.0468,
+    "day": 81
+   },
+   "nullLikelyStrong90": 0.0416,
+   "nullPossible90": 0.1218,
+   "missed90": {
+    "sleep_deficit": {
+     "P(raises) < 0.9": 7
+    },
+    "missed_dose": {
+     "P(raises) < 0.9": 54,
+     "not enough data": 3,
+     "exposed hard moments < min": 4
+    },
+    "planned_transitions": {
+     "P(raises) < 0.9": 12
+    },
+    "illness": {
+     "P(raises) < 0.9": 10,
+     "exposed hard moments < min": 4,
+     "not enough data": 9
+    }
+   },
+   "falseByFeature": {
+    "unusual_day": 4576,
+    "noise_high": 2073,
+    "hunger_gap": 2046,
+    "appointment_near": 2019,
+    "night_wakings": 1549,
+    "new_place": 1267
+   }
+  },
+  {
+   "name": "A + tau [0.75, 1.0]",
+   "families": 200,
+   "detection90": {
+    "mean": 0.8575,
+    "lo": 0.8343,
+    "hi": 0.8807,
+    "n": 200
+   },
+   "detection120": {
+    "mean": 0.8975,
+    "lo": 0.8775,
+    "hi": 0.9175,
+    "n": 200
+   },
+   "plantedFound90": {
+    "sleep_deficit": 0.96,
+    "missed_dose": 0.69,
+    "planned_transitions": 0.915,
+    "illness": 0.865
+   },
+   "plantedFound120": {
+    "sleep_deficit": 0.97,
+    "missed_dose": 0.745,
+    "planned_transitions": 0.925,
+    "illness": 0.95
+   },
+   "worstNullLikelyStrong": {
+    "value": 0.0432,
+    "day": 80
+   },
+   "nullLikelyStrong90": 0.0382,
+   "nullPossible90": 0.1255,
+   "missed90": {
+    "sleep_deficit": {
+     "P(raises) < 0.9": 8
+    },
+    "missed_dose": {
+     "P(raises) < 0.9": 38,
+     "exposed hard moments < min": 18,
+     "not enough data": 3,
+     "exposed < min": 3
+    },
+    "planned_transitions": {
+     "P(raises) < 0.9": 13,
+     "OR < min": 4
+    },
+    "illness": {
+     "exposed hard moments < min": 8,
+     "P(raises) < 0.9": 9,
+     "not enough data": 9,
+     "exposed < min": 1
+    }
+   },
+   "falseByFeature": {
+    "unusual_day": 4465,
+    "hunger_gap": 2050,
+    "appointment_near": 1853,
+    "noise_high": 1560,
+    "night_wakings": 1532,
+    "new_place": 1239
+   }
+  },
+  {
+   "name": "A + likely.pHarm 0.88",
+   "families": 200,
+   "detection90": {
+    "mean": 0.89,
+    "lo": 0.8684,
+    "hi": 0.9116,
+    "n": 200
+   },
+   "detection120": {
+    "mean": 0.9188,
+    "lo": 0.9004,
+    "hi": 0.9371,
+    "n": 200
+   },
+   "plantedFound90": {
+    "sleep_deficit": 0.98,
+    "missed_dose": 0.775,
+    "planned_transitions": 0.915,
+    "illness": 0.89
+   },
+   "plantedFound120": {
+    "sleep_deficit": 0.97,
+    "missed_dose": 0.82,
+    "planned_transitions": 0.925,
+    "illness": 0.96
+   },
+   "worstNullLikelyStrong": {
+    "value": 0.0613,
+    "day": 65
+   },
+   "nullLikelyStrong90": 0.0563,
+   "nullPossible90": 0.1071,
+   "missed90": {
+    "sleep_deficit": {
+     "P(raises) < 0.88": 4
+    },
+    "missed_dose": {
+     "P(raises) < 0.88": 21,
+     "exposed hard moments < min": 18,
+     "not enough data": 3,
+     "exposed < min": 3
+    },
+    "planned_transitions": {
+     "P(raises) < 0.88": 10,
+     "OR < min": 7
+    },
+    "illness": {
+     "exposed hard moments < min": 8,
+     "not enough data": 9,
+     "exposed < min": 1,
+     "P(raises) < 0.88": 4
+    }
+   },
+   "falseByFeature": {
+    "unusual_day": 5878,
+    "appointment_near": 3027,
+    "hunger_gap": 2795,
+    "night_wakings": 2407,
+    "new_place": 2326,
+    "noise_high": 1739
+   }
+  },
+  {
+   "name": "A + trigger sd x0.85",
+   "families": 200,
+   "detection90": {
+    "mean": 0.895,
+    "lo": 0.8732,
+    "hi": 0.9168,
+    "n": 200
+   },
+   "detection120": {
+    "mean": 0.94,
+    "lo": 0.924,
+    "hi": 0.956,
+    "n": 200
+   },
+   "plantedFound90": {
+    "sleep_deficit": 0.98,
+    "missed_dose": 0.795,
+    "planned_transitions": 0.915,
+    "illness": 0.89
+   },
+   "plantedFound120": {
+    "sleep_deficit": 0.99,
+    "missed_dose": 0.88,
+    "planned_transitions": 0.915,
+    "illness": 0.975
+   },
+   "worstNullLikelyStrong": {
+    "value": 0.0595,
+    "day": 81
+   },
+   "nullLikelyStrong90": 0.0555,
+   "nullPossible90": 0.1408,
+   "missed90": {
+    "sleep_deficit": {
+     "P(raises) < 0.9": 4
+    },
+    "missed_dose": {
+     "exposed hard moments < min": 18,
+     "P(raises) < 0.9": 17,
+     "not enough data": 3,
+     "exposed < min": 3
+    },
+    "planned_transitions": {
+     "P(raises) < 0.9": 8,
+     "OR < min": 9
+    },
+    "illness": {
+     "exposed hard moments < min": 8,
+     "P(raises) < 0.9": 4,
+     "not enough data": 9,
+     "exposed < min": 1
+    }
+   },
+   "falseByFeature": {
+    "unusual_day": 7173,
+    "appointment_near": 3102,
+    "hunger_gap": 2556,
+    "new_place": 2499,
+    "night_wakings": 1799,
+    "noise_high": 1134
+   }
+  },
+  {
+   "name": "EXPERIMENT mean0, original thresholds",
+   "families": 200,
+   "detection90": {
+    "mean": 0.3313,
+    "lo": 0.3033,
+    "hi": 0.3592,
+    "n": 200
+   },
+   "detection120": {
+    "mean": 0.3613,
+    "lo": 0.331,
+    "hi": 0.3915,
+    "n": 200
+   },
+   "plantedFound90": {
+    "sleep_deficit": 0.8,
+    "missed_dose": 0.11,
+    "planned_transitions": 0.285,
+    "illness": 0.13
+   },
+   "plantedFound120": {
+    "sleep_deficit": 0.855,
+    "missed_dose": 0.14,
+    "planned_transitions": 0.315,
+    "illness": 0.135
+   },
+   "worstNullLikelyStrong": {
+    "value": 0.0071,
+    "day": 118
+   },
+   "nullLikelyStrong90": 0.0045,
+   "nullPossible90": 0.0253,
+   "missed90": {
+    "sleep_deficit": {
+     "P(raises) < 0.9": 40
+    },
+    "missed_dose": {
+     "P(raises) < 0.9": 119,
+     "exposed hard moments < min": 42,
+     "not enough data": 3,
+     "exposed < min": 14
+    },
+    "planned_transitions": {
+     "P(raises) < 0.9": 125,
+     "OR < min": 18
+    },
+    "illness": {
+     "P(raises) < 0.9": 142,
+     "exposed hard moments < min": 19,
+     "exposed < min": 4,
+     "not enough data": 9
+    }
+   },
+   "falseByFeature": {
+    "place_school": 545,
+    "night_wakings": 374,
+    "hunger_gap": 359,
+    "unusual_day": 233,
+    "noise_high": 112,
+    "appointment_near": 96
+   }
+  },
+  {
+   "name": "EXPERIMENT mean0 + L p0.85 exp15 pos3 or1.2",
+   "families": 200,
+   "detection90": {
+    "mean": 0.43,
+    "lo": 0.3991,
+    "hi": 0.4609,
+    "n": 200
+   },
+   "detection120": {
+    "mean": 0.4875,
+    "lo": 0.4575,
+    "hi": 0.5175,
+    "n": 200
+   },
+   "plantedFound90": {
+    "sleep_deficit": 0.875,
+    "missed_dose": 0.155,
+    "planned_transitions": 0.495,
+    "illness": 0.195
+   },
+   "plantedFound120": {
+    "sleep_deficit": 0.92,
+    "missed_dose": 0.23,
+    "planned_transitions": 0.59,
+    "illness": 0.21
+   },
+   "worstNullLikelyStrong": {
+    "value": 0.0155,
+    "day": 66
+   },
+   "nullLikelyStrong90": 0.0134,
+   "nullPossible90": 0.0163,
+   "missed90": {
+    "sleep_deficit": {
+     "P(raises) < 0.85": 25
+    },
+    "missed_dose": {
+     "P(raises) < 0.85": 146,
+     "exposed hard moments < min": 17,
+     "not enough data": 3,
+     "exposed < min": 3
+    },
+    "planned_transitions": {
+     "P(raises) < 0.85": 91,
+     "OR < min": 10
+    },
+    "illness": {
+     "P(raises) < 0.85": 143,
+     "exposed hard moments < min": 8,
+     "not enough data": 9,
+     "exposed < min": 1
+    }
+   },
+   "falseByFeature": {
+    "place_school": 1517,
+    "night_wakings": 862,
+    "hunger_gap": 760,
+    "unusual_day": 462,
+    "noise_high": 398,
+    "high_sugar_recent": 300
+   }
+  },
+  {
+   "name": "EXPERIMENT mean0 + L p0.80 exp15 pos3 or1.2",
+   "families": 200,
+   "detection90": {
+    "mean": 0.4788,
+    "lo": 0.4477,
+    "hi": 0.5098,
+    "n": 200
+   },
+   "detection120": {
+    "mean": 0.5538,
+    "lo": 0.5231,
+    "hi": 0.5844,
+    "n": 200
+   },
+   "plantedFound90": {
+    "sleep_deficit": 0.92,
+    "missed_dose": 0.2,
+    "planned_transitions": 0.515,
+    "illness": 0.28
+   },
+   "plantedFound120": {
+    "sleep_deficit": 0.935,
+    "missed_dose": 0.34,
+    "planned_transitions": 0.61,
+    "illness": 0.33
+   },
+   "worstNullLikelyStrong": {
+    "value": 0.0345,
+    "day": 109
+   },
+   "nullLikelyStrong90": 0.0292,
+   "nullPossible90": 0.0005,
+   "missed90": {
+    "sleep_deficit": {
+     "P(raises) < 0.8": 16
+    },
+    "missed_dose": {
+     "P(raises) < 0.8": 137,
+     "exposed hard moments < min": 17,
+     "not enough data": 3,
+     "exposed < min": 3
+    },
+    "planned_transitions": {
+     "P(raises) < 0.8": 64,
+     "OR < min": 33
+    },
+    "illness": {
+     "P(raises) < 0.8": 126,
+     "exposed hard moments < min": 8,
+     "not enough data": 9,
+     "exposed < min": 1
+    }
+   },
+   "falseByFeature": {
+    "place_school": 3035,
+    "night_wakings": 1543,
+    "hunger_gap": 1362,
+    "high_sugar_recent": 1286,
+    "unusual_day": 799,
+    "noise_high": 753
+   }
+  },
+  {
+   "name": "EXPERIMENT mean0 + L p0.80 exp15 pos3 or1.2 + tau [0.5,0.75,1,1.5]",
+   "families": 200,
+   "detection90": {
+    "mean": 0.445,
+    "lo": 0.4135,
+    "hi": 0.4765,
+    "n": 200
+   },
+   "detection120": {
+    "mean": 0.4988,
+    "lo": 0.4648,
+    "hi": 0.5327,
+    "n": 200
+   },
+   "plantedFound90": {
+    "sleep_deficit": 0.94,
+    "missed_dose": 0.18,
+    "planned_transitions": 0.435,
+    "illness": 0.225
+   },
+   "plantedFound120": {
+    "sleep_deficit": 0.96,
+    "missed_dose": 0.26,
+    "planned_transitions": 0.505,
+    "illness": 0.27
+   },
+   "worstNullLikelyStrong": {
+    "value": 0.0282,
+    "day": 109
+   },
+   "nullLikelyStrong90": 0.0245,
+   "nullPossible90": 0.0005,
+   "missed90": {
+    "sleep_deficit": {
+     "P(raises) < 0.8": 12
+    },
+    "missed_dose": {
+     "P(raises) < 0.8": 140,
+     "exposed hard moments < min": 17,
+     "not enough data": 3,
+     "exposed < min": 3,
+     "OR < min": 1
+    },
+    "planned_transitions": {
+     "P(raises) < 0.8": 87,
+     "OR < min": 26
+    },
+    "illness": {
+     "P(raises) < 0.8": 137,
+     "exposed hard moments < min": 8,
+     "not enough data": 9,
+     "exposed < min": 1
+    }
+   },
+   "falseByFeature": {
+    "place_school": 2758,
+    "night_wakings": 1400,
+    "hunger_gap": 1166,
+    "noise_high": 742,
+    "high_sugar_recent": 741,
+    "unusual_day": 719
+   }
+  },
+  {
+   "name": "EXPERIMENT mean0.5 + A",
+   "families": 200,
+   "detection90": {
+    "mean": 0.5438,
+    "lo": 0.5148,
+    "hi": 0.5727,
+    "n": 200
+   },
+   "detection120": {
+    "mean": 0.6225,
+    "lo": 0.5941,
+    "hi": 0.6509,
+    "n": 200
+   },
+   "plantedFound90": {
+    "sleep_deficit": 0.93,
+    "missed_dose": 0.215,
+    "planned_transitions": 0.61,
+    "illness": 0.42
+   },
+   "plantedFound120": {
+    "sleep_deficit": 0.945,
+    "missed_dose": 0.365,
+    "planned_transitions": 0.67,
+    "illness": 0.51
+   },
+   "worstNullLikelyStrong": {
+    "value": 0.0113,
+    "day": 82
+   },
+   "nullLikelyStrong90": 0.0082,
+   "nullPossible90": 0.0468,
+   "missed90": {
+    "sleep_deficit": {
+     "P(raises) < 0.9": 14
+    },
+    "missed_dose": {
+     "P(raises) < 0.9": 133,
+     "exposed hard moments < min": 18,
+     "not enough data": 3,
+     "exposed < min": 3
+    },
+    "planned_transitions": {
+     "P(raises) < 0.9": 60,
+     "OR < min": 18
+    },
+    "illness": {
+     "P(raises) < 0.9": 98,
+     "exposed hard moments < min": 8,
+     "not enough data": 9,
+     "exposed < min": 1
+    }
+   },
+   "falseByFeature": {
+    "hunger_gap": 701,
+    "unusual_day": 630,
+    "night_wakings": 567,
+    "place_school": 329,
+    "noise_high": 329,
+    "appointment_near": 213
+   }
+  }
+ ],
+ "seconds": 392.336
+}
