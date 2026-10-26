@@ -1,0 +1,24 @@
+node_modules/
+.env
+.env.local
+out/
+.venv/
+dist/
+.expo/
+ios/
+android/
+.pio/
+*.db
+.DS_Store
+expo-env.d.ts
+.metro-health-check*
+*.jks
+*.p8
+*.p12
+*.mobileprovision
+
+# Vercel project link (local)
+.vercel
+.env*
+!.env.example
+!**/.env.example

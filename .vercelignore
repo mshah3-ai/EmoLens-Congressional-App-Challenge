@@ -1,0 +1,25 @@
+# What `vercel deploy` uploads for the clinician portal: the portal, the shared packages it imports (engine, shared,
+# reports) and the workspace files pnpm needs. Other workspace projects keep only their package.json (the lockfile
+# check needs them); their code, native iOS/Android folders, docs and data stay home.
+node_modules
+**/node_modules
+.git
+.venv
+analysis
+docs
+firmware
+out
+**/.next
+**/.expo
+apps/mobile/*
+!apps/mobile/package.json
+packages/simulator/*
+!packages/simulator/package.json
+supabase/*
+!supabase/package.json
+apps/portal/e2e
+apps/portal/playwright.config.ts
+apps/portal/test
+apps/portal/playwright-report
+apps/portal/test-results
+.env*

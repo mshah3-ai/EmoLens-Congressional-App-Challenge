@@ -1,0 +1,39 @@
+{
+  "name": "emolens",
+  "private": true,
+  "version": "0.1.0",
+  "description": "EmoLens: privacy-first pattern tracker for families of autistic children",
+  "license": "MIT",
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "scripts": {
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "sim:smoke": "pnpm --filter @emolens/simulator sim --scenario default --families 5 --days 30 --out out/smoke --experiments E1",
+    "test:cloud": "supabase migration up --local && supabase test db && pnpm --filter @emolens/cloud test:integration && pnpm --filter @emolens/portal test:e2e"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "globals": "^17.12.0",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.71.0"
+  },
+  "op-sqlite": {
+    "sqlcipher": true
+  },
+  "pnpm": {
+    "overrides": {
+      "source-map-js@<1.2.2": "1.2.2"
+    },
+    "auditConfig": {
+      "ignoreGhsas": [
+        "GHSA-86w9-cpqp-85rv",
+        "GHSA-vfj7-8cjw-p6xm"
+      ]
+    }
+  }
+}
